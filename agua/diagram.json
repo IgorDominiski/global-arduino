@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "author": "anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -9, "left": -39, "attrs": {} },
+    { "type": "wokwi-rain-sensor", "id": "rain", "top": 49.8, "left": 228.6, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot", "top": -106.9, "left": 230.2, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "ledV",
+      "top": -148.8,
+      "left": -184.2,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledA",
+      "top": -148.8,
+      "left": -152.6,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledR",
+      "top": -148.8,
+      "left": -120.2,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": -160.8,
+      "left": -257.4,
+      "attrs": { "volume": "0.5" }
+    },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd1",
+      "top": -339.2,
+      "left": 5.6,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "ledV:C", "uno:GND.1", "black", [ "v0" ] ],
+    [ "ledV:A", "uno:2", "green", [ "v0" ] ],
+    [ "ledA:C", "uno:GND.1", "black", [ "v0" ] ],
+    [ "ledA:A", "uno:3", "gold", [ "v0" ] ],
+    [ "ledR:C", "uno:GND.1", "black", [ "v0" ] ],
+    [ "ledR:A", "uno:4", "red", [ "v0" ] ],
+    [ "buzzer:1", "uno:5", "blue", [ "v38.4", "h384", "v38.4" ] ],
+    [ "buzzer:2", "uno:GND.3", "black", [ "h-0.4", "v259.3" ] ],
+    [ "pot:GND", "uno:GND.2", "black", [ "v278.4", "h-131.9" ] ],
+    [ "pot:VCC", "uno:5V", "red", [ "v288", "h-161.4" ] ],
+    [ "pot:SIG", "uno:A0", "orange", [ "h-0.4", "v268.8", "h-103" ] ],
+    [ "rain:GND", "uno:GND.2", "black", [ "v0" ] ],
+    [ "rain:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "rain:AO", "uno:A1", "purple", [ "v0" ] ],
+    [ "lcd1:GND", "uno:GND.1", "black", [ "h-57.6", "v211.2", "h115.2" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h-86.4", "v528.1", "h201.6" ] ],
+    [ "lcd1:SDA", "uno:A4", "green", [ "h-48", "v566.6", "h57.6" ] ],
+    [ "lcd1:SCL", "uno:A5", "green", [ "h-28.8", "v595.5", "h249.6", "v-28.8" ] ]
+  ],
+  "dependencies": {}
+}
