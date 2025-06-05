@@ -55,7 +55,7 @@ A sensibilidade do sistema pode ser ajustada girando o potenciômetro. O valor l
 
 Assista o funcionamento completo no vídeo abaixo:
 
-[📽️ Clique aqui para assistir]()
+[📽️ Clique aqui para assistir](https://youtu.be/2ll4jTITJ7I)
 
 ---
 
